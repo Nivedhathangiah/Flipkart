@@ -17,7 +17,7 @@ public class TestRunnerClass extends BaseClass {
 	@AfterClass
 	public static void reports() {
 
-		Reporting.generateJVMReport(System.getProperty("user.dir") + "src\\test\\resources\\Reports\\flipkart.json");
+		Reporting.generateJVMReport(getProjectPath() + "\\src\\test\\resources\\ReportJSON\\flipkart.json");
 
 	}
 

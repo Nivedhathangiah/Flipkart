@@ -9,4 +9,4 @@ Feature: Verifying User Registration Module
 
     Examples: 
       | mobileNo   |
-      | 9962313925 |
+      | 9042753367 |

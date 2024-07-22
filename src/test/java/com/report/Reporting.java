@@ -4,14 +4,16 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.utility.BaseClass;
+
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 
-public class Reporting {
+public class Reporting extends BaseClass {
 
 	public static void generateJVMReport(String json) {
 
-		File file = new File(System.getProperty("user.dir") + "\\Reports");
+		File file = new File(getProjectPath() + "\\Reports");
 
 		Configuration configuration = new Configuration(file, "Flipkart Automation");
 

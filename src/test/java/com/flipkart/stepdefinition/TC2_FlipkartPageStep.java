@@ -42,12 +42,12 @@ public class TC2_FlipkartPageStep extends BaseClass {
 
 	@When("User enter the order confirmation details {string}")
 	public void user_enter_the_order_confirmation_details(String emailId) {
-		pom.getPurchasePage().addEmailDetails(emailId);
+	pom.getPurchasePage().addEmailDetails(emailId);
 	}
 
 	@When("User enter the payment details {string},{string},{string} and {string}")
 	public void user_enter_the_payment_details_and(String cardNo, String expMonth, String expYear, String cvv) {
-		pom.getPurchasePage().addPayment(cardNo, expMonth, expYear, cvv);
+	//	pom.getPurchasePage().addPayment(cardNo, expMonth, expYear, cvv);
 	}
 
 	@When("User logout from the application")

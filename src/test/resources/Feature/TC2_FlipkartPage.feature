@@ -16,4 +16,4 @@ Feature: Verifying flipkart Module
 
     Examples: 
       | mobileNo   | productName | name    | pinCode | locality | address                         | addressType | emailId                    | cardNo           | month | year | cvv |
-      | 9962313925 | Iphone      | Nivetha |  600095 | Chennai  | City Centre Mall, Krishna Nagar | Home        |nivedhathangiah@gmail.com| 4017041082072656 |    11 |   29 | 123 |
+      |9042753367  | Iphone      | Nivetha |  600095 | Chennai  | City Centre Mall, Krishna Nagar | Home        |kvels0345@gmail.com| 4017041082072656 |    11 |   29 | 123 |

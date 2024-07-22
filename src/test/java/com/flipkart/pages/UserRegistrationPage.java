@@ -1,5 +1,6 @@
 package com.flipkart.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -21,11 +22,14 @@ public class UserRegistrationPage extends BaseClass {
 	@FindBy(xpath = "//div[@class='I-qZ4M vLRlQb']/input")
 	private WebElement txtMobileNo;
 
-	@FindBy(xpath = "//button[@type='submit']/child::span")
+	@FindBy(xpath = "//button[@class='QqFHMw twnTnD _7Pd1Fp']")
 	private WebElement btnContinue;
 
 	@FindBy(xpath = "//button[@type='submit']/child::span")
 	private WebElement signUpBtn;
+
+	@FindBy(xpath = "//input[@class='r4vIwl _5BVqVB zgwPDa BV+Dqf']")
+	private WebElement txtOTP;
 
 	@FindBy(xpath = "//span[text()='Account']")
 	private WebElement lnkAccount;
@@ -64,6 +68,7 @@ public class UserRegistrationPage extends BaseClass {
 		elementSendKeys(getTxtMobileNo(), mobileNo);
 		elementClick(getBtnContinue());
 		sleep();
+		txtOTP.sendKeys(Keys.ENTER);
 
 	}
 

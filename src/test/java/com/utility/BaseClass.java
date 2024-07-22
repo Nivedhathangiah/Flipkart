@@ -8,6 +8,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +25,7 @@ public class BaseClass {
 
 	public static WebDriver driver;
 
-	public String getProjectPath() {
+	public static String getProjectPath() {
 		return System.getProperty("user.dir");
 
 	}
@@ -34,7 +35,7 @@ public class BaseClass {
 		driverWait.until(ExpectedConditions.visibilityOf(element));
 	}
 
-	public String getPropertyFileValue(String key) throws FileNotFoundException, IOException {
+	public static String getPropertyFileValue(String key) throws FileNotFoundException, IOException {
 		Properties properties = new Properties();
 		properties.load(new FileInputStream(getProjectPath() + "\\config\\config.properties"));
 		Object object = properties.get(key);
@@ -42,8 +43,8 @@ public class BaseClass {
 		return value;
 	}
 
-	public void browserLaunch(String browserType) {
-		switch (browserType) {
+	public void browserLaunch(String browser) {
+		switch (browser) {
 		case "CHROME":
 			driver = new ChromeDriver();
 
@@ -126,6 +127,11 @@ public class BaseClass {
 
 	}
 
+	public void elementClickJS(WebElement element) {
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click()", element);
+	}
+
 	public void mouseOverAction(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).perform();
@@ -143,12 +149,13 @@ public class BaseClass {
 
 	public void sleep() {
 		try {
-			Thread.sleep(8000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
 	public void sleep(int ms) {
 		try {
 			Thread.sleep(ms);

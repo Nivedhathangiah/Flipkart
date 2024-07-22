@@ -34,9 +34,13 @@ public class LogoutPage extends BaseClass {
 	public WebElement getBtnLogout() {
 		return btnLogout;
 	}
+	
+	public void logout() {
+		// TODO Auto-generated method stub
+
+	}
 
 	public void clickLogoFlipkart() {
-
 		elementClick(logoFlipkart);
 		sleep();
 

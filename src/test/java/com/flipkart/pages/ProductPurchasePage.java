@@ -36,7 +36,7 @@ public class ProductPurchasePage extends BaseClass {
 	@FindBy(xpath = "//button[text()='Save and Deliver Here']")
 	private WebElement btnSaveAndDelivery;
 
-	@FindBy(xpath = "//span[text()='Credit / Debit / ATM Card']")
+	@FindBy(xpath = "(//div[@class='qsHXPi'])[4]")
 	private WebElement rdoCCNum;
 
 	@FindBy(xpath = "//input[@name='cardNumber']")
@@ -67,10 +67,15 @@ public class ProductPurchasePage extends BaseClass {
 	private WebElement btnAccept;
 
 	public void addEmailDetails(String emailId) {
-		elementSendKeys(txtEmail, emailId);
+		sleep(3000);
+		if (txtEmail.isEnabled()) {
+
+			elementSendKeys(txtEmail, emailId);
+
+		}
+		sleep(3000);
 		elementClick(btnContinue);
 		elementClick(btnAccept);
-
 	}
 
 	public void addDeliveryAddress(String name, String mobileNo, String pinCode, String locality, String address,
@@ -92,7 +97,8 @@ public class ProductPurchasePage extends BaseClass {
 	}
 
 	public void addPayment(String cardNo, String expMonth, String expYear, String cvv) {
-		elementClick(rdoCCNum);
+		sleep();
+		elementClickJS(rdoCCNum);
 		elementSendKeys(txtCCNum, cardNo);
 		selectOptionByText(dropDwnMonth, expMonth);
 		selectOptionByText(dropDwnYY, expYear);
