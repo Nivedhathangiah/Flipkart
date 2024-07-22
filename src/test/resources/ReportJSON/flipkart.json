@@ -1,0 +1,250 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 19,
+        "name": "Verifying flipkart Module",
+        "description": "",
+        "id": "verifying-flipkart-module;verifying-flipkart-module;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5699967800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the flipkart page",
+            "match": {
+              "location": "TC1_UserRegistrationStep.user_is_on_the_flipkart_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10005437700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User login with phone number \"9962313925\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"9962313925\"",
+                  "offset": 29
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_login_with_phone_number(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame\n  (Session info: chrome\u003d126.0.6478.182)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception\nBuild info: version: \u00274.15.0\u0027, revision: \u00271d14b5521b\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [b953498539f7ca698056a8b01b1c2ab9, isElementDisplayed {id\u003df.B73DF961F99DD05EF1DB20C6394F46DE.d.19D7C73AE691C41DD1847D899320E7BD.e.299}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\\Users\\admin\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62515/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on windows (b953498539f7ca698056a8b01b1c2ab9)] -\u003e xpath: //span[text()\u003d\u0027Account\u0027]]\nSession ID: b953498539f7ca698056a8b01b1c2ab9\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:283)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)\r\n\tat com.utility.BaseClass.visibilityOfElement(BaseClass.java:34)\r\n\tat com.utility.BaseClass.elementGetText(BaseClass.java:111)\r\n\tat com.flipkart.pages.UserRegistrationPage.getAccountMsgText(UserRegistrationPage.java:72)\r\n\tat com.flipkart.stepdefinition.TC1_UserRegistrationStep.user_should_verify_after_navigate_to_home_page_and_verify_My_account_is_present_in_the_catalog(TC1_UserRegistrationStep.java:37)\r\n\tat ✽.User should verify after navigate to home page and verify My account is present in the catalog \"Account\"(src/test/resources/Feature/TC2_FlipkartPage.feature:7)\r\n",
+              "duration": 14938810100,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "User should verify after navigate to home page and verify My account is present in the catalog \"Account\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account\"",
+                  "offset": 95
+                }
+              ],
+              "location": "TC1_UserRegistrationStep.user_should_verify_after_navigate_to_home_page_and_verify_My_account_is_present_in_the_catalog(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "User seach product \"Iphone\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Iphone\"",
+                  "offset": 19
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_seach_product(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5700,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User should verify same product listed in the search option  \"Iphone\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Iphone\"",
+                  "offset": 61
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_should_verify_same_product_listed_in_the_search_option(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4000,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "User add the product into cart",
+            "match": {
+              "location": "TC2_FlipkartPageStep.user_add_the_product_into_cart()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3600,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "User add the delivery address \"Nivetha\",\"9962313925\",\"600095\",\"Chennai\",\"City Centre Mall, Krishna Nagar\" and \"Home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nivetha\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"9962313925\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"600095\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"Chennai\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"City Centre Mall, Krishna Nagar\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"Home\"",
+                  "offset": 110
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_add_the_delivery_address_and(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3600,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "User enter the order confirmation details \"nivedhathangiah@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nivedhathangiah@gmail.com\"",
+                  "offset": 42
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_enter_the_order_confirmation_details(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3400,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "User enter the payment details \"4017041082072656\",\"11\",\"29\" and \"123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4017041082072656\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"11\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"29\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"123\"",
+                  "offset": 64
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_enter_the_payment_details_and(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3600,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "User logout from the application",
+            "match": {
+              "location": "TC2_FlipkartPageStep.user_logout_from_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3400,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "User should verify \"Login\" text to check if user is  successfully logout",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Login\"",
+                  "offset": 19
+                }
+              ],
+              "location": "TC2_FlipkartPageStep.user_should_verify_text_to_check_if_user_is_successfully_logout(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@product"
+          }
+        ]
+      }
+    ],
+    "name": "Verifying flipkart Module",
+    "description": "",
+    "id": "verifying-flipkart-module",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/TC2_FlipkartPage.feature",
+    "tags": [
+      {
+        "name": "@product",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

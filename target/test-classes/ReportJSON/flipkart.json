@@ -1,0 +1,98 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 12,
+        "name": "Verifying User Registration Module",
+        "description": "",
+        "id": "verifying-user-registration-module;verifying-user-registration-module;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5867809900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the flipkart page",
+            "match": {
+              "location": "TC1_UserRegistrationStep.user_is_on_the_flipkart_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1361627900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User navigate to flipkart registration page",
+            "match": {
+              "location": "TC1_UserRegistrationStep.user_navigate_to_flipkart_registration_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8462302500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters phone number \"9962313925\" to register",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"9962313925\"",
+                  "offset": 25
+                }
+              ],
+              "location": "TC1_UserRegistrationStep.user_enters_phone_number_to_register(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame\n  (Session info: chrome\u003d126.0.6478.182)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception\nBuild info: version: \u00274.15.0\u0027, revision: \u00271d14b5521b\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [1bae641da794420a00b465a6ffa998d2, isElementDisplayed {id\u003df.8C01A01352C48A7076AC774D3141E708.d.C10757CC372B0C4C8E6DD7A63D1A43D4.e.275}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\\Users\\admin\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62437}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62437/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on windows (1bae641da794420a00b465a6ffa998d2)] -\u003e xpath: //span[text()\u003d\u0027Account\u0027]]\nSession ID: 1bae641da794420a00b465a6ffa998d2\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:283)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)\r\n\tat com.utility.BaseClass.visibilityOfElement(BaseClass.java:34)\r\n\tat com.utility.BaseClass.elementGetText(BaseClass.java:111)\r\n\tat com.flipkart.pages.UserRegistrationPage.getAccountMsgText(UserRegistrationPage.java:72)\r\n\tat com.flipkart.stepdefinition.TC1_UserRegistrationStep.user_should_verify_after_navigate_to_home_page_and_verify_My_account_is_present_in_the_catalog(TC1_UserRegistrationStep.java:37)\r\n\tat ✽.User should verify after navigate to home page and verify My account is present in the catalog \"Account\"(src/test/resources/Feature/TC1_UserRegistration.feature:8)\r\n",
+              "duration": 14172160600,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "User should verify after navigate to home page and verify My account is present in the catalog \"Account\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account\"",
+                  "offset": 95
+                }
+              ],
+              "location": "TC1_UserRegistrationStep.user_should_verify_after_navigate_to_home_page_and_verify_My_account_is_present_in_the_catalog(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      }
+    ],
+    "name": "Verifying User Registration Module",
+    "description": "",
+    "id": "verifying-user-registration-module",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/TC1_UserRegistration.feature",
+    "tags": [
+      {
+        "name": "@register",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
